@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG VIDEO</title>
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Arial',Helvetica, sans-serif;
+            min-height: 100vh;
+            color: white;
+            background-color:black;
+        }
+        .background-video{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .content{
+            position: relative;
+            z-index: 1;
+            
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>big chungus</h1>
+        <p>67</p>
+    </div>
+</body>
+</html> 

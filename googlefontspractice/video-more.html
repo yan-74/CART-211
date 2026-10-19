@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        .size-controls button{
+            cursor: pointer;
+        }
+
+        video{
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            background-color: black;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        video.small{
+            width: 320px;
+        }
+        video.medium{
+            width: 480px;
+        }
+        video.large{
+            width: 720px;
+        }
+        video.full{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Show Video</h1>
+    <p>Watch the video below nowwwwwwwwwwwwwwwwwwww</p>
+    <div class="size-controls">
+        <strong>Change Video Size:</strong>
+        <button onclick="changeVideoSize('small')">Small</button>
+        <button onclick="changeVideoSize('medium')">Medium</button>
+        <button onclick="changeVideoSize('large')">Large</button>
+        <button onclick="changeVideoSize('full')">Full</button>
+
+        <video id="myVideo" class="full" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <script>
+            function changeVideoSize(size) {
+                const video = document.getElementById('myVideo');
+                video.className = size;
+                video.classList.remove('small', 'medium', 'large', 'full');
+                video.classList.add(size);
+            }
+        </script>
+    </div>
+</body>
+</html>
