@@ -1,5 +1,37 @@
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-size: 30px;
+    /*font-family: 'Redaction 35', serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;*/
+
+    /*font-family: "Six Caps", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;*/
+
+    /*font-family: "Bungee Hairline", sans-serif;
+    font-weight: 800;
+    font-style: normal;*/
+
+    /*font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "EDPT" 100,
+        "EHLT" 12;*/
+    
+    /*font-family: "Danfo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "ELSH" 0;*/
+    
+    font-family: "Yuyu Short", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*a{
@@ -41,13 +73,13 @@ nav a:hover{
 
 header h1{
     text-align: right;
-    font-size: 25px;
+    font-size: 50px;
     margin-right: 5px;
 }
 
 header h2{
     text-align: right;
-    font-size: 20px;
+    font-size: 40px;
     margin-top: 0px;
     margin-bottom: 30px;
     color: rgb(94, 92, 92);
@@ -55,7 +87,7 @@ header h2{
 
 main h3{
     text-align: left;
-    font-size: 20px;
+    font-size: 35px;
     margin-top: 0px;
     margin-bottom: 10px;
     color: rgb(94, 92, 92);
