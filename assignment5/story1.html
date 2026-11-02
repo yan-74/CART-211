@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story 1</title>
+
+    <meta name="description" content="A Humans of New York story - A course exercise (cart211_ exploring semantic HTML, CSS Grid, and Mobile queries)".>
+    
+    <!-- Open Graph meta tags controls how the page looks when shared on social media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Humans of New York">
+    <meta property="og:description" content="A Humans of New York story presented for CART 211">
+
+    <!-- Page URL and image used in social media previews-->
+    <meta property="og:url" content="https://yourwebsite.com/humans-of-new-york">
+    <meta property="og:image" content="https://hybrid.concordia.ca/btodd/assigment5-6/assets/america_pageant.jpg">
+
+    <!-- Image dimensions and alt text for social media previews -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Portrait associated with the America Pageant story">
+
+    <!--Twitter card metadata controls the apperance of shared links on X-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Humans of New York">
+    <meta name="twitter:description" content="A Humans of New York story">
+    <meta name="twitter:image" content="https://hybrid.concordia.ca/btodd/assigment5-6/assets/america_pageant.jpg">
+
+    <!--Identifies the prefered URL for this page to search engines-->
+    <link rel="canonical" href="https://hybrid.concordia.ca/btodd/assigment5-6/index.html">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <meta name="author" content="Yan Chi Ng">
+    <meta name="copyright" content="Copyright 2026 Yan Chi Ng, student project, 2026">
+
+    <link rel="stylesheet" href="default.css">
+
+    <!--Preconnect to Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--Loads Font Awesome, a library of ready-made icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/logo.png" alt="Humans of New York logo" width="110" height="50">
+                    </a>
+                </div>
+                <div class="menu1">
+
+                    <button type="button" class="close-menu" aria-label="Close Nav Menu">&times;</button>
+
+                    <a href="story1.html" class="menu1_active">STORIES</a>
+                    <a href="#" class="menu1_active">SERIES</a>
+                    <a href="index.html" class="menu1_active">ABOUT</a>
+                </div>
+                <div class="hamburger-menu">
+                    <button type="button" aria-label="Open Nav Menu">
+                        <!--Display horizontal lines from fontawesome-->
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                <h1>Humans Of New York</h1>
+                <h2 class="stories_title">America Pageant</h2>
+                <div class="pict">
+                    <figure class="left-stories">
+                        <img src="assets/america_pageant.jpg" alt="Portrait associated with the America Pageant story" width="1200" height="790" class="im">
+                    </figure>
+
+                    <div class="stories">
+                        <p>“I was seventeen. Only child, not a lot of friends. But I had a plan. I was going to become an actress, get a role on All My Children, meet my husband on set– and when that was all over, I’d host a talk show. Kelly Ripa did it; I could do it too. Back then it seemed like every woman on television had gotten their start as beauty queen. So my senior year I decided to enter my school’s Homecoming Queen competition. It was organized like a Ms. America pageant. But this was a rough high school, only one other girl signed up, so I had a good shot. My whole family got behind me. My mom was a seamstress. We noticed that in most pageants we watched, the winner wore a white dress. So she sewed me a white dress that I picked out of Seventeen Magazine. First came the interview portion, and that’s when the trouble started. The judges asked me about the Anita Hill testimony; I wasn’t ready for that. I was ready for world peace. They were supposed to ask me about my goals, so I could say world peace. But that didn’t happen. The talent portion was later that night at the homecoming dance. The whole school was there. I chose a Sheena Easton song; poor choice. Not the right crowd for that. The other girl chose ‘I Feel Good’ by Stephanie Mills, and she had the whole crowd singing along. That’s when I knew it was over. But then, a miracle. The guidance counselor quieted everyone down, and announced the winner: it was me. Me! It was my Kelly Kapowski moment. Everyone was cheering, the other girl congratulated me. But it only lasted five seconds, because the guidance counselor said: ‘Wait a second, I’m sorry. Joanna is the runner-up.’ It was the worst moment of my life. In fact, the only thing that got me through COVID was knowing that it could not possibly, possibly be worse than that moment. And here’s a twist for you. Remember that guidance counselor? Several years later I ended up acting alongside his son in a play at Queens College. In one scene I pulled a gun on him, and the director was like: ‘We need more anger. Think about something that makes you angry.’ I was like: ‘Well, that’s easy. His father ruined my senior year. And quite possibly, my entire life.”</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <div class="social">
+                <div class="icons-wrapper">
+                    <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
+                    <a href="#" class="fa fa-youtube" aria-label="Youtube"></a>
+                    <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+                </div>
+                <div class="credits">
+                    <p>Yan Chi Ng, CART 211, 2026, credits: humansofnyarchive.com</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
+</body>
+</html>
