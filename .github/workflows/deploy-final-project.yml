@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
     paths:
+      - "index.html"
+      - "assignment2/**"
+      - "Assessement3/**"
+      - "assignment5/**"
       - "FINAL_PROJECT/**"
       - ".github/workflows/deploy-final-project.yml"
   workflow_dispatch:
@@ -39,10 +43,17 @@ jobs:
         working-directory: FINAL_PROJECT
         run: npm run build
 
+      - name: Assemble website
+        run: |
+          mkdir -p _site/final-project
+          cp index.html _site/index.html
+          cp -r assignment2 Assessement3 assignment5 _site/
+          cp -r FINAL_PROJECT/dist/* _site/final-project/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: FINAL_PROJECT/dist
+          path: _site
 
   deploy:
     environment:
