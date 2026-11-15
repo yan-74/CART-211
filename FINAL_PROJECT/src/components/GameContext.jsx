@@ -14,10 +14,19 @@ export function GameProvider({ children }) {
     const [stats, setStats] = useState(initialStats)
 
     function updateStats(changes) {
-        setStats((currentStats) => ({
-            ...currentStats,
-            ...changes,
-        }))
+        setStats((currentStats) => {
+            const clampedChanges = Object.fromEntries(
+                Object.entries(changes).map(([stat, value]) => [
+                    stat,
+                    Math.min(100, Math.max(0, value)),
+                ]),
+            )
+
+            return {
+                ...currentStats,
+                ...clampedChanges,
+            }
+        })
     }
 
     function resetGame() {

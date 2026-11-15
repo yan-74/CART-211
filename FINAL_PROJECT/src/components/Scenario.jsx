@@ -41,8 +41,13 @@ const scenarios = [
 function Scenario() {
     const { scenarioId } = useParams()
     const game = useContext(GameContext)
+    const stats = game.stats
     const scenario = scenarios[Number(scenarioId) - 1]
     const nextScenarioId = Number(scenarioId) + 1
+    /* if next scenario exists, use the id, otherwise go to finish page */
+    const nextDestination = nextScenarioId <= scenarios.length
+        ? `/scenario/${nextScenarioId}`
+        : '/finish'
 
     /* If the scenario doesn't exist, redirect to the first scenario */
     if (!scenario) {
@@ -65,34 +70,38 @@ function Scenario() {
             <div className="stats">
                 <div className="stat">
                     <label htmlFor="revenue">Revenue</label>
-                    <progress id="revenue" value={game.stats.revenue} max="100" />
-                    <span>{game.stats.revenue}%</span>
+                    <progress id="revenue" value={stats.revenue} min="0" max="100" />
+                    <span>{stats.revenue}%</span>
                 </div>
                 <div className="stat">
                     <label htmlFor="investor-trust">Investor Trust</label>
-                    <progress id="investor-trust" value={game.stats.investorTrust} max="100" />
-                    <span>{game.stats.investorTrust}%</span>
+                    <progress id="investor-trust" value={stats.investorTrust} min="0" max="100" />
+                    <span>{stats.investorTrust}%</span>
                 </div>
                 <div className="stat">
                     <label htmlFor="user-satisfaction">User Satisfaction</label>
-                    <progress id="user-satisfaction" value={game.stats.userSatisfaction} max="100" />
-                    <span>{game.stats.userSatisfaction}%</span>
+                    <progress id="user-satisfaction" value={stats.userSatisfaction} min="0" max="100" />
+                    <span>{stats.userSatisfaction}%</span>
                 </div>
                 <div className="stat">
                     <label htmlFor="user-traffic">User Traffic</label>
-                    <progress id="user-traffic" value={game.stats.userTraffic} max="100" />
-                    <span>{game.stats.userTraffic}%</span>
+                    <progress id="user-traffic" value={stats.userTraffic} min="0" max="100" />
+                    <span>{stats.userTraffic}%</span>
                 </div>
             </div>
 
             <h1>{scenario.title}</h1>
 
             <p>{scenario.text}</p>
-            {nextScenarioId <= scenarios.length ? (
-                <Link to={`/scenario/${nextScenarioId}`}>Next Scenario</Link>
-            ) : (
-                <Link to="/finish">Finish Game</Link>
-            )}
+            <div className="answers">
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 10, userTraffic: stats.userTraffic + 10, userSatisfaction: stats.userSatisfaction - 5})}}>Add Google Search Ads: Revenue +10, userTraffic +10, userSatisfaction -5</Link>
+
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue - 20, userSatisfaction: stats.userSatisfaction + 25, investorTrust: stats.investorTrust - 20})}}>Invest In Platform Features: Revenue -20, userSatisfaction +25, investorTrust -20</Link>
+
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 30, userSatisfaction: stats.userSatisfaction - 20, investorTrust: stats.investorTrust + 20})}}>Focus On Ad Targeting Infrastructure: Revenue +30, userSatisfaction -20, investorTrust +20</Link>
+
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue - 10, userSatisfaction: stats.userSatisfaction - 10, investorTrust: stats.investorTrust - 10})}}>Take A Break: Revenue -10, userSatisfaction -10, investorTrust -10</Link>
+            </div>
         </div>
     )
 }
