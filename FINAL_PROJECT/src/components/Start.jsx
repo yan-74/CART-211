@@ -2,6 +2,7 @@ import './Start.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Scenario from './Scenario.jsx'
 import Finish from './Finish.jsx'
+import { GameProvider } from './GameContext.jsx'
 
 function StartScreen() {
     return(
@@ -16,11 +17,13 @@ function StartScreen() {
 function Start() {
     return(
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<StartScreen />} />
-                <Route path="/scenario/:scenarioId" element={<Scenario />} />
-                <Route path="/finish" element={<Finish />} />
-            </Routes>
+            <GameProvider>
+                <Routes>
+                    <Route path="/" element={<StartScreen />} />
+                    <Route path="/scenario/:scenarioId" element={<Scenario />} />
+                    <Route path="/finish" element={<Finish />} />
+                </Routes>
+            </GameProvider>
         </BrowserRouter>
     )
 }

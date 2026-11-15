@@ -1,5 +1,7 @@
 import './Scenario.css'
 import { Link, Navigate, useParams } from 'react-router-dom'
+import { useContext } from 'react'
+import { GameContext } from './gameContext.js'
 
 const scenarios = [
     {
@@ -38,6 +40,7 @@ const scenarios = [
 
 function Scenario() {
     const { scenarioId } = useParams()
+    const game = useContext(GameContext)
     const scenario = scenarios[Number(scenarioId) - 1]
     const nextScenarioId = Number(scenarioId) + 1
 
@@ -62,6 +65,10 @@ function Scenario() {
             <h1>{scenario.title}</h1>
 
             <p>{scenario.text}</p>
+            <p>Revenue: {game.stats.revenue}</p>
+            <p>Investor Trust: {game.stats.investorTrust}</p>
+            <p>User Satisfaction: {game.stats.userSatisfaction}</p>
+            <p>User Traffic: {game.stats.userTraffic}</p>
             {nextScenarioId <= scenarios.length ? (
                 <Link to={`/scenario/${nextScenarioId}`}>Next Scenario</Link>
             ) : (
