@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { GameContext } from './gameContext.js'
 
 const initialStats = {
-    revenue: 0,
-    investorTrust: 0,
+    revenue: 50,
+    investorTrust: 50,
     userSatisfaction: 0,
     userTraffic: 0,
 }

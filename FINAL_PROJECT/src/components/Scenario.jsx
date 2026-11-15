@@ -62,13 +62,32 @@ function Scenario() {
                 <Link to="/scenario/8">8</Link>
             </nav>
 
+            <div className="stats">
+                <div className="stat">
+                    <label htmlFor="revenue">Revenue</label>
+                    <progress id="revenue" value={game.stats.revenue} max="100" />
+                    <span>{game.stats.revenue}%</span>
+                </div>
+                <div className="stat">
+                    <label htmlFor="investor-trust">Investor Trust</label>
+                    <progress id="investor-trust" value={game.stats.investorTrust} max="100" />
+                    <span>{game.stats.investorTrust}%</span>
+                </div>
+                <div className="stat">
+                    <label htmlFor="user-satisfaction">User Satisfaction</label>
+                    <progress id="user-satisfaction" value={game.stats.userSatisfaction} max="100" />
+                    <span>{game.stats.userSatisfaction}%</span>
+                </div>
+                <div className="stat">
+                    <label htmlFor="user-traffic">User Traffic</label>
+                    <progress id="user-traffic" value={game.stats.userTraffic} max="100" />
+                    <span>{game.stats.userTraffic}%</span>
+                </div>
+            </div>
+
             <h1>{scenario.title}</h1>
 
             <p>{scenario.text}</p>
-            <p>Revenue: {game.stats.revenue}</p>
-            <p>Investor Trust: {game.stats.investorTrust}</p>
-            <p>User Satisfaction: {game.stats.userSatisfaction}</p>
-            <p>User Traffic: {game.stats.userTraffic}</p>
             {nextScenarioId <= scenarios.length ? (
                 <Link to={`/scenario/${nextScenarioId}`}>Next Scenario</Link>
             ) : (
