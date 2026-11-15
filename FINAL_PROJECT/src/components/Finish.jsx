@@ -1,9 +1,9 @@
-import './Scenario.css'
+import './Finish.css'
 import { Link } from 'react-router-dom'
 
-function Scenario() {
+function Finish() {
     return(
-        <div>
+        <div className="finish-page">
             <h1>You finished the game!</h1>
             <p>Congratulations! You have completed the game.</p>
             <Link to="/">Play Again</Link>
@@ -11,4 +11,4 @@ function Scenario() {
     )
 }
 
-export default Scenario;
+export default Finish;

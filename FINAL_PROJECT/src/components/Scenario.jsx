@@ -47,8 +47,20 @@ function Scenario() {
     }
 
     return(
-        <div>
+        <div className="scenario-page">
+            <nav className="sidebar" aria-label="Scenario navigation">
+                <Link to="/scenario/1">1</Link>
+                <Link to="/scenario/2">2</Link>
+                <Link to="/scenario/3">3</Link>
+                <Link to="/scenario/4">4</Link>
+                <Link to="/scenario/5">5</Link>
+                <Link to="/scenario/6">6</Link>
+                <Link to="/scenario/7">7</Link>
+                <Link to="/scenario/8">8</Link>
+            </nav>
+
             <h1>{scenario.title}</h1>
+
             <p>{scenario.text}</p>
             {nextScenarioId <= scenarios.length ? (
                 <Link to={`/scenario/${nextScenarioId}`}>Next Scenario</Link>

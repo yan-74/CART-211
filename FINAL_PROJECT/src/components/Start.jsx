@@ -5,7 +5,7 @@ import Finish from './Finish.jsx'
 
 function StartScreen() {
     return(
-        <div>
+        <div className="start-page">
             <h1>Welcome to the DIGITAL PLATFORM GAME</h1>
             <p>This is the start page.</p>
             <Link to="/scenario/1">Start Game</Link>
