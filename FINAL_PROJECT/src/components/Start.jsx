@@ -1,5 +1,5 @@
 import './Start.css'
-import { HashRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Scenario from './Scenario.jsx'
 import Finish from './Finish.jsx'
 import { GameProvider } from './GameContext.jsx'
@@ -16,7 +16,7 @@ function StartScreen() {
 
 function Start() {
     return(
-        <HashRouter>
+        <BrowserRouter>
             <GameProvider>
                 <Routes>
                     <Route path="/" element={<StartScreen />} />
@@ -24,7 +24,7 @@ function Start() {
                     <Route path="/finish" element={<Finish />} />
                 </Routes>
             </GameProvider>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
 
