@@ -94,13 +94,13 @@ function Scenario() {
 
             <p>{scenario.text}</p>
             <div className="answers">
-                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 10, userTraffic: stats.userTraffic + 10, userSatisfaction: stats.userSatisfaction - 5})}}>Add Google Search Ads: Revenue +10, userTraffic +10, userSatisfaction -5</Link>
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 10, userTraffic: stats.userTraffic + 10, userSatisfaction: stats.userSatisfaction - 5})}}><span>Add Google Search Ads: <hr/>Revenue <span className="positive">+10</span>, User Traffic <span className="positive">+10</span>, User Satisfaction <span className="negative">-5</span></span></Link>
 
-                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue - 20, userSatisfaction: stats.userSatisfaction + 25, investorTrust: stats.investorTrust - 20})}}>Invest In Platform Features: Revenue -20, userSatisfaction +25, investorTrust -20</Link>
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue - 20, userSatisfaction: stats.userSatisfaction + 25, investorTrust: stats.investorTrust - 20})}}><span>Invest In Platform Features: <hr/>Revenue <span className="negative">-20</span>, User Satisfaction <span className="positive">+25</span>, InvestorTrust <span className="negative">-20</span></span></Link>
 
-                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 30, userSatisfaction: stats.userSatisfaction - 20, investorTrust: stats.investorTrust + 20})}}>Focus On Ad Targeting Infrastructure: Revenue +30, userSatisfaction -20, investorTrust +20</Link>
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 30, userSatisfaction: stats.userSatisfaction - 20, investorTrust: stats.investorTrust + 20})}}><span>Focus On Ad Targeting Infrastructure: <hr/>Revenue <span className="positive">+30</span>, User Satisfaction <span className="negative">-20</span>, Investor Trust <span className="positive">+20</span></span></Link>
 
-                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue - 10, userSatisfaction: stats.userSatisfaction - 10, investorTrust: stats.investorTrust - 10})}}>Take A Break: Revenue -10, userSatisfaction -10, investorTrust -10</Link>
+                <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue - 10, userSatisfaction: stats.userSatisfaction - 10, investorTrust: stats.investorTrust - 10})}}><span>Take A Break: <hr/>Revenue <span className="negative">-10</span>, User Satisfaction <span className="negative">-10</span>, Investor Trust <span className="negative">-10</span></span></Link>
             </div>
         </div>
     )

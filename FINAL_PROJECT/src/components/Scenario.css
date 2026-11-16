@@ -27,12 +27,15 @@
 /* Stats section styles */
 .stats{
     position: absolute;
-    top: 2rem;
-    left: 2rem;
-    width: 14rem;
+    top: 1rem;
+    left: 1rem;
+    width: 18rem;
+    padding: 1rem 2.5rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    background-color: #0f1b2f;
 }
 
 .stat {
@@ -48,7 +51,7 @@
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .stat progress {
@@ -88,7 +91,7 @@
 }
 
 .scenario-page p {
-    margin: 0 0 1rem;
+    margin: 0 0 5rem;
 }
 
 .answers {
@@ -98,7 +101,7 @@
     width: min(100%, 42rem);
 }
 
-.answers a {
+.scenario-page .answers a {
     min-height: 3rem;
     display: flex;
     align-items: center;
@@ -106,6 +109,7 @@
     box-sizing: border-box;
     text-align: center;
     overflow-wrap: anywhere;
+    padding: 23px;
 }
 
 .scenario-page a {
@@ -123,6 +127,16 @@
 .scenario-page a:hover {
     border-color: #ff5d8f;
     transform: translateY(-1px);
+}
+
+.negative {
+    color: #ff5d8f;
+    font-weight: 600;
+}
+
+.positive {
+    color: #4de3ff;
+    font-weight: 600;
 }
 
 @media (max-width: 700px) {
