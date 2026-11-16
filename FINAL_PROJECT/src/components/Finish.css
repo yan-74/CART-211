@@ -37,6 +37,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     text-align: center;
+    color: #e8f1ff;
 }
 
 .finish-stat progress {
@@ -50,6 +51,7 @@
     grid-column: 1;
     font-size: 1.1rem;
     text-align: center;
+    color: #e8f1ff;
 }
 
 .finish-page a {
@@ -59,9 +61,9 @@
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    /*transition: background-color 0.2s ease, transform 0.2s ease;*/
 }
-
+/*
 .finish-page a:hover {
     background-color: #535bf2;
     transform: translateY(-2px);
@@ -70,4 +72,4 @@
 .finish-page a:focus-visible {
     outline: 3px solid #aeb2ff;
     outline-offset: 3px;
-}
+}*/

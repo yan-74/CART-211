@@ -25,9 +25,9 @@
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    /*transition: background-color 0.2s ease, transform 0.2s ease;*/
 }
-
+/*
 .start-page a:hover {
     background-color: #535bf2;
     transform: translateY(-2px);
@@ -36,4 +36,4 @@
 .start-page a:focus-visible {
     outline: 3px solid #aeb2ff;
     outline-offset: 3px;
-}
+}*/

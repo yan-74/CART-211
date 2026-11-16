@@ -13,7 +13,7 @@
 .sidebar a {
     min-width: 0.8rem;
 }
-
+/*
 .sidebar a:hover {
     background-color: #535bf2;
     transform: translateX(-2px);
@@ -22,7 +22,7 @@
 .sidebar a:focus-visible {
     outline: 3px solid #aeb2ff;
     outline-offset: 3px;
-}
+}*/
 
 /* Stats section styles */
 .stats{
@@ -44,6 +44,7 @@
 
 .stat label {
     font-weight: 600;
+    color: #e8f1ff;
 }
 
 .stat progress {
@@ -58,6 +59,7 @@
     grid-row: 1 / span 2;
     min-width: 2.5rem;
     text-align: right;
+    color: #e8f1ff;
 }
 
 
@@ -106,9 +108,9 @@
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    /*transition: background-color 0.2s ease, transform 0.2s ease;*/
 }
-
+/*
 .scenario-page a:hover {
     background-color: #535bf2;
     transform: translateY(-2px);
@@ -117,7 +119,7 @@
 .scenario-page a:focus-visible {
     outline: 3px solid #aeb2ff;
     outline-offset: 3px;
-}
+}*/
 
 @media (max-width: 700px) {
     .answers {
