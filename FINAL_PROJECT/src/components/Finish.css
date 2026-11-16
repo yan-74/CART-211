@@ -34,42 +34,45 @@
 
 .finish-stat label {
     grid-column: 1;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 20px;
     text-align: center;
     color: #e8f1ff;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .finish-stat progress {
     width: 100%;
     height: 1.5rem;
     grid-column: 1;
-    accent-color: #646cff;
+    accent-color: #4de3ff;
 }
 
 .finish-stat span {
     grid-column: 1;
-    font-size: 1.1rem;
+    font-size: 20px;
     text-align: center;
     color: #e8f1ff;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .finish-page a {
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    background-color: #646cff;
+    border: 3px solid #4de3ff;
+    background-color: #0f1b2f;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
-    /*transition: background-color 0.2s ease, transform 0.2s ease;*/
-}
-/*
-.finish-page a:hover {
-    background-color: #535bf2;
-    transform: translateY(-2px);
+    font-family: "VT323", monospace;
+    font-style: normal;
+    font-size: 22px;
 }
 
-.finish-page a:focus-visible {
-    outline: 3px solid #aeb2ff;
-    outline-offset: 3px;
-}*/
+.finish-page a:hover {
+    border-color: #ff5d8f;
+    transform: translateY(-1px);
+}
+
