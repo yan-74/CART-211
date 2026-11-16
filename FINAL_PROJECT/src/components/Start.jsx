@@ -16,7 +16,7 @@ function StartScreen() {
 
 function Start() {
     return(
-        <BrowserRouter>
+        <BrowserRouter basename="/CART-211/final_project">
             <GameProvider>
                 <Routes>
                     <Route path="/" element={<StartScreen />} />
