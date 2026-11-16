@@ -45,10 +45,10 @@ jobs:
 
       - name: Assemble website
         run: |
-          mkdir -p _site/final-project
+          mkdir -p _site/final_project
           cp index.html _site/index.html
           cp -r assignment2 Assessement3 assignment5 _site/
-          cp -r FINAL_PROJECT/dist/* _site/final-project/
+          cp -r FINAL_PROJECT/dist/* _site/final_project/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
