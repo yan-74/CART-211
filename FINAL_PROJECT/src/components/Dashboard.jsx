@@ -1,6 +1,71 @@
 import './Dashboard.css'
+/* CHART CODE REFERENCED FROM: https://github.com/reactchartjs/react-chartjs-2/blob/master/sandboxes/line/default/App.tsx */
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
-function Dashboard({ stats }) {
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+function Dashboard({ stats, statsHistory }) {
+    const chartData = {
+        labels: statsHistory.map((point) => `Scenario ${point.scenario}`),
+        datasets: [
+            {
+                label: 'Revenue',
+                data: statsHistory.map((point) => point.revenue),
+                borderColor: '#4de3ff',
+                backgroundColor: '#4de3ff',
+            },
+            {
+                label: 'Investor Trust',
+                data: statsHistory.map((point) => point.investorTrust),
+                borderColor: '#ff5d8f',
+                backgroundColor: '#ff5d8f',
+                tension: 0.3,
+            },
+            {
+                label: 'User Satisfaction',
+                data: statsHistory.map((point) => point.userSatisfaction),
+                borderColor: '#aeb2ff',
+                backgroundColor: '#aeb2ff',
+                tension: 0.3,
+            },
+            {
+                label: 'User Traffic',
+                data: statsHistory.map((point) => point.userTraffic),
+                borderColor: '#f5c542',
+                backgroundColor: '#f5c542',
+                tension: 0.3,
+            },
+        ],
+    }
+
+    const chartOptions = {
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 100,
+            },
+        },
+    }
+
     return (
         <div className="dashboard">
             <div className="dashboard-left">
@@ -27,7 +92,9 @@ function Dashboard({ stats }) {
                         <span>{stats.userTraffic}%</span>
                     </div>
                 </div>
-                <div className="line_chart"></div>
+                <div className="line_chart">
+                    <Line data={chartData} options={chartOptions} />
+                </div>
             </div>
             <div className="dashboard-right">
                 <div className="company_outlook"></div>

@@ -61,7 +61,7 @@ function Scenario() {
             <h1>{scenario.title}</h1>
             <p>{scenario.text}</p>
         
-            <Dashboard stats={stats} />
+            <Dashboard stats={stats} statsHistory={game.statsHistory} />
 
             <p>Choose how to respond to the situation.</p>
             <div className="answers">
