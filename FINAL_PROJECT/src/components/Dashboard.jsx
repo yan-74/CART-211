@@ -24,7 +24,7 @@ ChartJS.register(
 
 function Dashboard({ stats, statsHistory }) {
     const chartData = {
-        labels: statsHistory.map((point) => `Scenario ${point.scenario}`),
+        labels: statsHistory.map((point) => `Q${point.scenario}`),
         datasets: [
             {
                 label: 'Revenue',
@@ -58,10 +58,49 @@ function Dashboard({ stats, statsHistory }) {
 
     const chartOptions = {
         responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    pointStyle: 'circle',
+                    boxWidth: 8,
+                    boxHeight: 8,
+                    color: '#e8f1ff',
+                    font: {
+                        family: 'VT323, monospace',
+                        size: 15,
+                    }
+                },
+            },
+        },
         scales: {
+            x: {
+                ticks: {
+                    color: '#e8f1ff',
+                    font: {
+                        family: 'VT323',
+                        size: 20,
+                    },
+                },
+                grid: {
+                    color: 'rgba(232, 241, 255, 0.5)',
+                },
+            },
             y: {
                 min: 0,
                 max: 100,
+                ticks: {
+                    color: '#e8f1ff',
+                    font: {
+                        family: 'VT323',
+                        size: 20,
+                    },
+                },
+                grid: {
+                    color: 'rgba(232, 241, 255, 0.5)',
+                },
             },
         },
     }
@@ -92,7 +131,9 @@ function Dashboard({ stats, statsHistory }) {
                         <span>{stats.userTraffic}%</span>
                     </div>
                 </div>
+                <hr></hr>
                 <div className="line_chart">
+                    <p>PERFORMANCE HISTORY</p>
                     <Line data={chartData} options={chartOptions} />
                 </div>
             </div>
