@@ -11,31 +11,49 @@ const initialStats = {
 }
 
 export function GameProvider({ children }) {
-    const [stats, setStats] = useState(initialStats)
+    /* gameState contains CURRENT stats & initial history */
+    const [gameState, setGameState] = useState({
+        stats: initialStats,
+        statsHistory: [{ scenario: 1, ...initialStats }],
+    })
 
     function updateStats(changes) {
-        setStats((currentStats) => {
+        setGameState((currentState) => {
             const clampedChanges = Object.fromEntries(
                 Object.entries(changes).map(([stat, value]) => [
                     stat,
                     Math.min(100, Math.max(0, value)),
                 ]),
             )
-
-            return {
-                ...currentStats,
+            /* merge the current stats with the clamped changes to create the next stats */
+            const nextStats = {
+                ...currentState.stats,
                 ...clampedChanges,
+            }
+            /* return the new game state with updated stats and updated history */
+            return {
+                stats: nextStats,
+                statsHistory: [
+                    ...currentState.statsHistory,
+                    {
+                        scenario: currentState.statsHistory.length + 1,
+                        ...nextStats,
+                    },
+                ],
             }
         })
     }
 
     function resetGame() {
-        setStats(initialStats)
+        setGameState({
+            stats: initialStats,
+            statsHistory: [{ scenario: 1, ...initialStats }],
+        })
     }
 
     return (
         /* Makes the game state available to all components in the tree */
-        <GameContext.Provider value={{ stats, updateStats, resetGame }}>
+        <GameContext.Provider value={{ ...gameState, updateStats, resetGame }}>
             {children}
         </GameContext.Provider>
     )
