@@ -3,10 +3,11 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 1.5rem;
     border: 1px solid white;
     padding: 2rem;
     margin: 1rem auto;
+    text-align: left;
 }
 
 .dashboard-left,
@@ -24,22 +25,12 @@
     grid-template-rows: 1fr 1fr;
 }
 
-.bar_chart{
-    text-align: left;
-}
-
-.bar_chart p {
-    margin: 0 0 0.4rem;
-    font-size: 25px;
-}
-
 .line_chart{
     position: relative;
-    text-align: left;
     height: 15rem;
 }
 
-.line_chart p {
+.dashboard p {
     margin: 0 0 0.4rem;
     font-size: 25px;
 }

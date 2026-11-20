@@ -138,8 +138,12 @@ function Dashboard({ stats, statsHistory }) {
                 </div>
             </div>
             <div className="dashboard-right">
-                <div className="company_outlook"></div>
-                <div className="message_board"></div>
+                <div className="company_outlook">
+                    <p>COMPANY OUTLOOK</p>
+                </div>
+                <div className="message_board">
+                    <p>DEPARTMENT MESSAGES</p>
+                </div>
             </div>
         </div>
     )
