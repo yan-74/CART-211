@@ -57,22 +57,13 @@ function Scenario() {
 
     return(
         <div className="scenario-page">
-            <nav className="sidebar" aria-label="Scenario navigation">
-                <Link to="/scenario/1">1</Link>
-                <Link to="/scenario/2">2</Link>
-                <Link to="/scenario/3">3</Link>
-                <Link to="/scenario/4">4</Link>
-                <Link to="/scenario/5">5</Link>
-                <Link to="/scenario/6">6</Link>
-                <Link to="/scenario/7">7</Link>
-                <Link to="/scenario/8">8</Link>
-            </nav>
-
+            <p>THE BOARD MEETING</p>
+            <h1>{scenario.title}</h1>
+            <p>{scenario.text}</p>
+        
             <Dashboard stats={stats} />
 
-            <h1>{scenario.title}</h1>
-
-            <p>{scenario.text}</p>
+            <p>Choose how to respond to the situation.</p>
             <div className="answers">
                 <Link to={nextDestination} onClick={() => {game.updateStats({revenue: stats.revenue + 10, userTraffic: stats.userTraffic + 10, userSatisfaction: stats.userSatisfaction - 5})}}><span>Add Google Search Ads: <hr/>Revenue <span className="positive">+10</span>, User Traffic <span className="positive">+10</span>, User Satisfaction <span className="negative">-5</span></span></Link>
 
