@@ -24,55 +24,6 @@
     outline-offset: 3px;
 }*/
 
-/* Stats section styles */
-.stats{
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 18rem;
-    padding: 1rem 2.5rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    background-color: #0f1b2f;
-}
-
-.stat {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.25rem 0.75rem;
-    align-items: center;
-}
-
-.stat label {
-    font-weight: 600;
-    color: #e8f1ff;
-    font-family: "VT323", monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 17px;
-}
-
-.stat progress {
-    width: 100%;
-    height: 0.75rem;
-    grid-column: 1;
-    accent-color: #4de3ff;
-}
-
-.stat span {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    min-width: 2.5rem;
-    text-align: right;
-    color: #e8f1ff;
-    font-family: "VT323", monospace;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
 .scenario-page {
     position: relative;
     min-height: 100svh;

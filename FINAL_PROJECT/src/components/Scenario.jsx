@@ -2,6 +2,7 @@ import './Scenario.css'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { useContext } from 'react'
 import { GameContext } from './gameContext.js'
+import Dashboard from './Dashboard.jsx'
 
 const scenarios = [
     {
@@ -67,28 +68,7 @@ function Scenario() {
                 <Link to="/scenario/8">8</Link>
             </nav>
 
-            <div className="stats">
-                <div className="stat">
-                    <label htmlFor="revenue">Revenue</label>
-                    <progress id="revenue" value={stats.revenue} min="0" max="100" />
-                    <span>{stats.revenue}%</span>
-                </div>
-                <div className="stat">
-                    <label htmlFor="investor-trust">Investor Trust</label>
-                    <progress id="investor-trust" value={stats.investorTrust} min="0" max="100" />
-                    <span>{stats.investorTrust}%</span>
-                </div>
-                <div className="stat">
-                    <label htmlFor="user-satisfaction">User Satisfaction</label>
-                    <progress id="user-satisfaction" value={stats.userSatisfaction} min="0" max="100" />
-                    <span>{stats.userSatisfaction}%</span>
-                </div>
-                <div className="stat">
-                    <label htmlFor="user-traffic">User Traffic</label>
-                    <progress id="user-traffic" value={stats.userTraffic} min="0" max="100" />
-                    <span>{stats.userTraffic}%</span>
-                </div>
-            </div>
+            <Dashboard stats={stats} />
 
             <h1>{scenario.title}</h1>
 
