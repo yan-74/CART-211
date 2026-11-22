@@ -6,8 +6,8 @@ import { GameContext } from './gameContext.js'
 const initialStats = {
     revenue: 50,
     investorTrust: 50,
-    userSatisfaction: 0,
-    userTraffic: 0,
+    userSatisfaction: 50,
+    userTraffic: 50,
 }
 
 export function GameProvider({ children }) {

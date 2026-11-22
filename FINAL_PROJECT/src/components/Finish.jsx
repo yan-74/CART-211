@@ -9,7 +9,7 @@ function Finish() {
 
     return(
         <div className="finish-page">
-            <h1>You finished the game!</h1>
+            <h1>The Board Meeting has concluded.</h1>
             <p>Congratulations! You have completed the game.</p>
             <p>Final Stats:</p>
 

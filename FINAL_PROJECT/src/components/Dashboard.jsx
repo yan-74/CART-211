@@ -1,4 +1,5 @@
 import './Dashboard.css'
+import { getCompanyOutlook } from './companyStatus.js'
 /* CHART CODE REFERENCED FROM: https://github.com/reactchartjs/react-chartjs-2/blob/master/sandboxes/line/default/App.tsx */
 import {
   Chart as ChartJS,
@@ -23,8 +24,9 @@ ChartJS.register(
 );
 
 function Dashboard({ stats, statsHistory }) {
+    /* chart settings and data */
     const chartData = {
-        labels: statsHistory.map((point) => `Q${point.scenario}`),
+        labels: statsHistory.map((point) => `S${point.scenario}`),
         datasets: [
             {
                 label: 'Revenue',
@@ -105,6 +107,9 @@ function Dashboard({ stats, statsHistory }) {
         },
     }
 
+    /* get the company status based on the current stats */
+    const companyStatus = getCompanyOutlook(stats)
+
     return (
         <div className="dashboard">
             <div className="dashboard-left">
@@ -140,9 +145,9 @@ function Dashboard({ stats, statsHistory }) {
             <div className="dashboard-right">
                 <div className="company_outlook">
                     <p>COMPANY OUTLOOK</p>
-                    <div className="status_card">
-                        <h3 className="status_text">Current Status: Stable</h3>
-                        <p>Revenue is up, but user satisfaction is down. Long-term retention is at risk.</p>
+                    <div className={`outlook_${companyStatus.severity}`} id="status_card">
+                        <h3 className="status_text">Current Status: {companyStatus.title}</h3>
+                        <p>{companyStatus.message}</p>
                     </div>
                 </div>
                 <hr></hr>

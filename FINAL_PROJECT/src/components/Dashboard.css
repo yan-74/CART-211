@@ -84,22 +84,36 @@ hr {
     min-width: 0;
 }
 
-.status_card {
-    border: 1px solid #38ffb3;
+#status_card {
     box-sizing: border-box;
     padding: 0.85rem 1rem;
+}
+
+.outlook_normal{
+    border: 1px solid #38ffb3;
     background-color: rgba(56, 255, 179, 0.1);
+}
+
+.outlook_warning{
+    border: 1px solid #ffc14d;
+    background-color: rgba(255, 193, 77, 0.1);
+}
+
+.outlook_critical{
+    border: 1px solid #ff5d8f;
+    background-color: rgba(255, 93, 143, 0.1);
 }
 
 .status_text {
     color: #e8f1ff;
     font-family: "VT323", monospace;
     font-size: 20px;
-    font-weight: bold;
+    line-height: 1.1;
+    font-weight: 400;
     margin: 0 0 0.5rem;
 }
 
-.status_card p {
+#status_card p {
     color: #b9c4d6;
     font-size: 18px;
     line-height: 1.15;
