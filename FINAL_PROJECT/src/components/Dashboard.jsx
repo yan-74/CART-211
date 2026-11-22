@@ -31,8 +31,8 @@ function Dashboard({ stats, statsHistory }) {
             {
                 label: 'Revenue',
                 data: statsHistory.map((point) => point.revenue),
-                borderColor: '#4de3ff',
-                backgroundColor: '#4de3ff',
+                borderColor: '#f5c542',
+                backgroundColor: '#f5c542',
             },
             {
                 label: 'Investor Trust',
@@ -51,8 +51,8 @@ function Dashboard({ stats, statsHistory }) {
             {
                 label: 'User Traffic',
                 data: statsHistory.map((point) => point.userTraffic),
-                borderColor: '#f5c542',
-                backgroundColor: '#f5c542',
+                borderColor: '#4de3ff',
+                backgroundColor: '#4de3ff',
                 tension: 0.3,
             },
         ],

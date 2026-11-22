@@ -8,7 +8,7 @@
     border-radius: 0.35rem;
     background: #dfe4e8;
     padding: 2rem;
-    margin: 1.5rem auto 2rem;
+    margin: 1.5rem auto 1.5rem;
     text-align: left;
     box-shadow:
         16px 18px 24px rgba(7, 13, 22, 0.5),
@@ -84,6 +84,23 @@ hr {
     font-size: 20px;
 }
 
+#revenue{
+    accent-color: #f5c542;
+}
+
+#investor-trust{
+    accent-color: #ff5d8f;
+}
+
+#user-satisfaction{
+    accent-color: #aeb2ff;
+}
+
+#user-traffic{
+    accent-color: #4de3ff;
+}
+
+
 /* Company status styling */
 .company_outlook,
 .message_board {
@@ -146,9 +163,6 @@ hr {
     border-bottom: 1px solid #aab4bd;
     padding: 0.65rem 0.75rem;
     background: #edf1f4;
-    box-shadow:
-        4px 5px 0 rgba(138, 148, 158, 0.55),
-        inset 1px 1px 0 #fff;
 }
 
 .message_item h4 {
