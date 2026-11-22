@@ -79,9 +79,20 @@ hr {
     grid-row: 1 / span 2;
     min-width: 2.5rem;
     text-align: right;
-    color: #263240;
     font-family: "VT323", monospace;
     font-size: 20px;
+}
+
+.stat_normal {
+    color: rgb(21, 150, 96);
+}
+
+.stat_warning {
+    color: #b48600;
+}
+
+.stat_critical {
+    color: #c43f6b;
 }
 
 #revenue{
@@ -157,12 +168,23 @@ hr {
 }
 
 .message_item {
-    border-left: 3px solid #4de3ff;
     border-top: 1px solid #eef2f5;
     border-right: 1px solid #aab4bd;
     border-bottom: 1px solid #aab4bd;
     padding: 0.65rem 0.75rem;
     background: #edf1f4;
+}
+
+.department_normal {
+    border-left: 3px solid #38ffb3;
+}
+
+.department_warning {
+    border-left: 3px solid #ffc14d;
+}
+
+.department_critical {
+    border-left: 3px solid #ff5d8f;
 }
 
 .message_item h4 {
