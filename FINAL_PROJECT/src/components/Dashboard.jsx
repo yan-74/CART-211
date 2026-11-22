@@ -140,9 +140,42 @@ function Dashboard({ stats, statsHistory }) {
             <div className="dashboard-right">
                 <div className="company_outlook">
                     <p>COMPANY OUTLOOK</p>
+                    <div className="status_card">
+                        <h3 className="status_text">Current Status: Stable</h3>
+                        <p>Revenue is up, but user satisfaction is down. Long-term retention is at risk.</p>
+                    </div>
                 </div>
+                <hr></hr>
                 <div className="message_board">
                     <p>DEPARTMENT MESSAGES</p>
+                    <div className="message_item">
+                        <div className="message_header">
+                            <h4>Finance</h4>
+                            <p className="message_time">9:55 am</p>
+                        </div>
+                        <p>We need to improve our social media presence.</p>
+                    </div>
+                    <div className="message_item">
+                        <div className="message_header">
+                            <h4>Investor Relations</h4>
+                            <p className="message_time">9:55 am</p>
+                        </div>
+                        <p>We need to improve our social media presence.</p>
+                    </div>
+                    <div className="message_item">
+                        <div className="message_header">
+                            <h4>Product</h4>    
+                            <p className="message_time">9:55 am</p>
+                        </div>
+                        <p>We need to improve our social media presence.</p>
+                    </div>
+                    <div className="message_item">
+                        <div className="message_header">
+                            <h4>Marketing</h4>
+                            <p className="message_time">9:55 am</p>
+                        </div>
+                        <p>We need to improve our social media presence.</p>
+                    </div>
                 </div>
             </div>
         </div>

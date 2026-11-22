@@ -2,9 +2,10 @@
     width: min(100%, 75rem);
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr);
     gap: 1.5rem;
-    border: 1px solid white;
+    border: 1px solid rgba(232, 241, 255, 0.5);
+    background: rgba(15, 27, 47, 0.35);
     padding: 2rem;
     margin: 1rem auto;
     text-align: left;
@@ -13,7 +14,7 @@
 .dashboard-left,
 .dashboard-right {
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .dashboard-left {
@@ -22,17 +23,18 @@
 }
 
 .dashboard-right {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    align-content: start;
 }
 
 .line_chart{
     position: relative;
-    height: 15rem;
+    height: 14.5rem;
 }
 
 .dashboard p {
     margin: 0 0 0.4rem;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 hr {
@@ -41,6 +43,8 @@ hr {
     border-top: 1px solid rgba(232, 241, 255, 0.5);
     margin: 0.25rem 0;
 }
+
+/* Bar chart styling */
 
 .stat {
     display: grid;
@@ -72,4 +76,81 @@ hr {
     color: #e8f1ff;
     font-family: "VT323", monospace;
     font-size: 20px;
+}
+
+/* Company status styling */
+.company_outlook,
+.message_board {
+    min-width: 0;
+}
+
+.status_card {
+    border: 1px solid #38ffb3;
+    box-sizing: border-box;
+    padding: 0.85rem 1rem;
+    background-color: rgba(56, 255, 179, 0.1);
+}
+
+.status_text {
+    color: #e8f1ff;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+}
+
+.status_card p {
+    color: #b9c4d6;
+    font-size: 18px;
+    line-height: 1.15;
+}
+
+.message_board {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 0.55rem;
+}
+
+.message_board > p {
+    margin-bottom: 0.1rem;
+}
+
+.message_item {
+    border-left: 3px solid #4de3ff;
+    border-top: 1px solid rgba(232, 241, 255, 0.2);
+    border-right: 1px solid rgba(232, 241, 255, 0.2);
+    border-bottom: 1px solid rgba(232, 241, 255, 0.2);
+    padding: 0.65rem 0.75rem;
+    background: rgba(15, 27, 47, 0.6);
+}
+
+.message_item h4 {
+    margin: 0 0 0.2rem;
+    color: #4de3ff;
+    font-family: "VT323", monospace;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.message_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message_header h4 {
+    margin: 0;
+}
+
+.message_item .message_time {
+    margin: 0;
+    color: #b9c4d6;
+    font-size: 14px;
+
+}
+
+.message_item p {
+    color: #e8f1ff;
+    font-size: 17px;
+    line-height: 1.05;
 }
