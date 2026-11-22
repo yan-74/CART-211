@@ -69,7 +69,7 @@ function Dashboard({ stats, statsHistory }) {
                     pointStyle: 'circle',
                     boxWidth: 8,
                     boxHeight: 8,
-                    color: '#e8f1ff',
+                    color: '#263240',
                     font: {
                         family: 'VT323, monospace',
                         size: 15,
@@ -80,28 +80,28 @@ function Dashboard({ stats, statsHistory }) {
         scales: {
             x: {
                 ticks: {
-                    color: '#e8f1ff',
+                    color: '#263240',
                     font: {
                         family: 'VT323',
                         size: 20,
                     },
                 },
                 grid: {
-                    color: 'rgba(232, 241, 255, 0.5)',
+                    color: 'rgba(38, 50, 64, 0.5)',
                 },
             },
             y: {
                 min: 0,
                 max: 100,
                 ticks: {
-                    color: '#e8f1ff',
+                    color: '#263240',
                     font: {
                         family: 'VT323',
                         size: 20,
                     },
                 },
                 grid: {
-                    color: 'rgba(232, 241, 255, 0.5)',
+                    color: 'rgba(38, 50, 64, 0.5)',
                 },
             },
         },
