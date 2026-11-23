@@ -1,5 +1,5 @@
 import './Dashboard.css'
-import { getCompanyOutlook, getDepartmentSeverities } from './companyStatus.js'
+import { getCompanyOutlook, getDepartmentSeverities } from './data/companyStatus.js'
 /* CHART CODE REFERENCED FROM: https://github.com/reactchartjs/react-chartjs-2/blob/master/sandboxes/line/default/App.tsx */
 import {
   Chart as ChartJS,
